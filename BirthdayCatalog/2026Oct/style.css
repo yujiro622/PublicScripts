@@ -1,0 +1,276 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    --bg-opacity: 0.3;
+    position: relative;
+    margin: 0;
+    padding: 20px;
+
+    font-family: "M PLUS Rounded 1c", sans-serif;
+
+    background-color: #f5f5f5;
+    min-height: 100vh;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url("images/background.jfif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: var(--bg-opacity);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.app {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+.bg-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.bg-control input {
+    width: 80px;
+    padding: 6px 8px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 30px;
+
+    color: #ff69b4;
+    font-size: 42px;
+    font-weight: 700;
+
+    /* 白いふちどり */
+    -webkit-text-stroke: 1px white;
+
+    /* 白い背景のように見えるふち＋影 */
+    text-shadow:
+        3px 3px 0 white,
+        -3px 3px 0 white,
+        3px -3px 0 white,
+        -3px -3px 0 white;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    row-gap: 60px;
+}
+
+.cake-section {
+    margin-top: 50px;
+}
+
+.cake-section h2 {
+    margin-bottom: 30px;
+    color: #be5b84;
+}
+
+.image-card {
+    width: calc(33.333% - 14px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    cursor: pointer;
+    transition:
+        opacity 0.3s,
+        filter 0.3s,
+        transform 0.2s;
+}
+
+.image-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    display: block;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+#cake-container .image-card img {
+    height: 375px;
+}
+
+.image-name {
+    margin-top: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    flex: 1;
+}
+
+.action-row {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 20px 0 10px;
+}
+
+.action-button {
+    width: 240px;
+    height: auto;
+    cursor: pointer;
+    display: block;
+}
+
+.selected-price {
+    margin-top: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    min-height: 40px;
+}
+
+.selected-table {
+    margin: 20px auto 0;
+    width: 100%;
+    max-width: 900px;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    color: #333;
+    table-layout: fixed;
+}
+
+.selected-table th,
+.selected-table td {
+    border: 2px solid #dca2bf;
+    padding: 10px 12px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.selected-table thead th {
+    background: rgba(255, 221, 234, 0.9);
+    font-weight: bold;
+}
+
+.selected-table tfoot td {
+    background: rgba(255, 235, 244, 0.9);
+    font-weight: bold;
+}
+
+.too-much-popup,
+.success-popup {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 20px 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 50;
+    cursor: pointer;
+    overflow: auto;
+}
+
+.too-much-popup-inner,
+.success-popup-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    max-width: 1200px;
+    max-height: 1200vh;
+    width: min(92vw, 1200px);
+}
+
+.success-popup-inner {
+    justify-content: flex-start;
+    max-height: calc(100vh - 40px);
+    overflow-y: auto;
+}
+
+.too-much-image,
+.success-image {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    border-radius: 16px;
+    display: block;
+    margin: 0 auto 12px;
+}
+
+.too-much-message {
+    font-size: 40px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    text-shadow:
+        2px 2px 0 white,
+        -2px 2px 0 white,
+        2px -2px 0 white,
+        -2px -2px 0 white;
+}
+
+.success-title {
+    font-size: clamp(2.2rem, 4vw, 3.75rem);
+    line-height: 1.2;
+    font-weight: bold;
+    color: #be5b84;
+    text-align: center;
+    margin: 0 0 16px;
+    text-shadow:
+        2px 2px 0 white,
+        -2px 2px 0 white,
+        2px -2px 0 white,
+        -2px -2px 0 white;
+}
+
+/* タップした画像 */
+.image-card.selected {
+    opacity: 1;
+    filter: none;
+    transform: scale(1.03);
+}
+
+/* 選ばれていない画像 */
+.image-card.disabled {
+    opacity: 0.3;
+    filter: grayscale(100%);
+    cursor: pointer;
+}
+
+/* スマホ */
+@media (max-width: 600px) {
+
+    .image-container {
+        gap: 10px;
+    }
+
+    .image-card {
+        width: 31%;
+    }
+
+    .image-name {
+        font-size: 16px;
+    }
+}

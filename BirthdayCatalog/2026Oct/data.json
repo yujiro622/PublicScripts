@@ -1,0 +1,99 @@
+[
+  {
+    "image": "images/Sanrio_1.png",
+    "name": "アガツマ(AGATSUMA) Sanrio characters サンリオキャラクターズ きらきらスノードーム",
+    "price": 3309,
+    "platform": "Amazon"
+    
+  },
+  {
+    "image": "images/Sanrio_2.png",
+    "name": "エジソンママ ぷにょぷにょアクアリウム サンリオ マイメロディ・クロミ 12色",
+    "price": 3610,
+    "platform": "Yodobashi"
+  },
+{
+    "image": "images/Sanrio_4.png",
+    "name": "[バンダイ(BANDAI)] ずっと×2なかよしケータイ HELLO KITTY Ver.",
+    "price": 5718,
+    "platform": "Amazon",
+    "status": "disable"
+  },
+  {
+    "image": "images/Sanrio_3.png",
+    "name": "ハナヤマ Hanayama TubeLet（チューブレット） 専用リフィル サンリオキャラクターズ マイメロディチャーム",
+    "price":758,
+    "platform":"Yodobashi",
+    "dependsOn": ["images/Tubelet.png"]
+  },
+  {
+    "image": "images/Tubelet.png",
+    "name": "ハナヤマ Hanayama チューブレット",
+    "price": 1480,
+    "platform": "Yodobashi"
+  },
+   {
+    "image": "images/Sanrio_5.png",
+    "name": "ユニック SR-0105 サンリオキャラクターズ もしもしトランシーバー",
+    "price": 1870,
+    "platform": "Yodobashi"
+  },
+     {
+    "image": "images/Sanrio_6.png",
+    "name": "アクアビーズ キャラクター オールインワンセット ",
+    "price": 2773,
+    "platform": "Amazon"
+  },
+           {
+    "image": "images/Princess_1.png",
+    "name": " EPOCH アクアビーズ キャラクター オールインワンセット 【 ディズニープリンセス きらめきジュエリーEX 】",
+    "price": 4273,
+    "platform": "Amazon"
+  },
+     {
+    "image": "images/Sanrio_7.png",
+    "name": "マルカ サンリオキャラクターズ おしゃべりケータイでんわ ",
+    "price": 1190,
+    "platform": "Yodobashi"
+  },
+       {
+    "image": "images/Sanrio_8.png",
+    "name": "バンダイ BANDAI Make Up Palette（メイクアップパレット） サンリオキャラクターズ マイメロディ",
+    "price": 2100,
+    "platform": "Yodobashi"
+  },
+       {
+    "image": "images/Sanrio_9.png",
+    "name": "サンリオ バック型コスメセット 粧美堂",
+    "price": 2530,
+    "platform": "Amazon"
+  },
+         {
+    "image": "images/Princess_2.png",
+    "name": "ディズニープリンセス　こども安全包丁シートまな板セット",
+    "price": 2310,
+    "platform": "DisneyStore"
+  },
+           {
+    "image": "images/cat.png",
+    "name": "イワヤ IWAYA 電動ぬいぐるみ ピッコリーネ スコティッシュ",
+    "price": 1900,
+    "platform": "Yodobashi"
+  },
+
+{
+    "image": "images/cake1.png",
+    "name": "マイメロディ カスタムケーキ",
+    "price": 6300,
+    "platform": "Cake JP",
+    "tag":"cake"
+},
+{
+    "image": "images/cake2.png",
+    "name": "「パティスリー モンシェール」ハロー・マイメロディ",
+    "price": 5940,
+    "platform": "Hankyu Food",
+    "tag":"cake"
+}
+
+]

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5th Birthday Gifts</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="app">
+        <h1>5th Birthday Gifts</h1>
+        <h2>ほしいものをえらんでね</h2>
+
+        <div id="image-container" class="image-container">
+            <!-- JavaScriptで画像を表示 -->
+        </div>
+
+        <section class="cake-section" aria-labelledby="cake-title">
+            <h2 id="cake-title">ケーキをえらんでね</h2>
+            <div id="cake-container" class="image-container">
+                <!-- JavaScriptでケーキを表示 -->
+            </div>
+        </section>
+
+        <div class="action-row">
+            <img id="button-ok" src="images/button_ok.png" alt="OK" class="action-button">
+            <img id="button-reset" src="images/button_reset.png" alt="Reset" class="action-button">
+        </div>
+
+        <div id="selected-price" class="selected-price">合計金額: ¥0</div>
+        <div id="too-much-popup" class="too-much-popup" aria-live="polite">
+            <div class="too-much-popup-inner">
+                <img src="images/Too_much.jfif" alt="Too much" class="too-much-image">
+                <div class="too-much-message">たくさんえらびすぎだよ！！</div>
+            </div>
+        </div>
+        <div id="cake-error-popup" class="too-much-popup" aria-live="polite">
+            <div class="too-much-popup-inner">
+                <img src="images/Too_much.jfif" alt="Too much" class="too-much-image">
+                <div class="too-much-message">ケーキを選んでね</div>
+            </div>
+        </div>
+        <div id="success-popup" class="success-popup" aria-live="polite">
+            <div class="success-popup-inner">
+                <div class="success-title">お誕生日たのしみだね！</div>
+                <img src="images/success.jfif" alt="Success" class="success-image">
+                <table id="selected-table" class="selected-table">
+                    <thead>
+                        <tr>
+                            <th>名前</th>
+                            <th>金額</th>
+                            <th>Platform</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2">合計</td>
+                            <td id="selected-total-cell">¥0</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
