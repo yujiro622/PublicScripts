@@ -249,7 +249,7 @@ h1 {
 .image-card.selected {
     opacity: 1;
     filter: none;
-    transform: scale(1.03);
+    transform: scale(1.2);
 }
 
 /* 選ばれていない画像 */

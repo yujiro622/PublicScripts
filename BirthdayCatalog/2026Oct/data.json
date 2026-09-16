@@ -94,6 +94,12 @@
     "price": 5940,
     "platform": "Hankyu Food",
     "tag":"cake"
+},
+{
+    "image": "images/cake3.png",
+    "name": "＜ラプンツェル＞ドレスケーキ",
+    "price": 3996,
+    "platform": "Cozy Corner",
+    "tag":"cake"
 }
-
 ]
