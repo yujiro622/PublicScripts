@@ -284,11 +284,12 @@ h1 {
     padding: 0;
     border: 0;
     border-radius: 50%;
-    background: #be5b84;
-    color: white;
-    opacity: 0.08;
+    background: transparent;
+    color: transparent;
+    opacity: 0;
     cursor: pointer;
     z-index: 40;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .secret-popup {
