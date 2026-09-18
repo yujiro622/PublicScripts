@@ -2,7 +2,12 @@
 fetch("data.json")
     .then(response => response.json())
     .then(data => {
-        const maxPrice = 10000 + 6000; // 最大金額の設定
+        const defaultMaxPrice = 16000;
+        let savedName = localStorage.getItem("birthdayCatalogName") || "";
+        const savedMaxPrice = Number(localStorage.getItem("birthdayCatalogMaxPrice"));
+        let maxPrice = Number.isFinite(savedMaxPrice) && savedMaxPrice >= 0
+            ? savedMaxPrice
+            : defaultMaxPrice;
         const container = document.getElementById("image-container");
         const cakeContainer = document.getElementById("cake-container");
         const cakeError = document.getElementById("cake-error");
@@ -14,9 +19,71 @@ fetch("data.json")
         const successPopup = document.getElementById("success-popup");
         const resetButton = document.getElementById("button-reset");
         const okButton = document.getElementById("button-ok");
+        const pageTitle = document.getElementById("page-title");
+        const secretButton = document.getElementById("secret-button");
+        const secretPopup = document.getElementById("secret-popup");
+        const secretName = document.getElementById("secret-name");
+        const secretMaxPrice = document.getElementById("secret-max-price");
+        const secretCancel = document.getElementById("secret-cancel");
+        const secretOk = document.getElementById("secret-ok");
         const BACKGROUND_OPACITY = 0.1;
+        let secretTapCount = 0;
+        let secretTapTimer;
 
         document.body.style.setProperty("--bg-opacity", BACKGROUND_OPACITY.toString());
+
+        const updatePageTitle = name => {
+            pageTitle.textContent = name ? `${name} 5th Birthday Gifts` : "5th Birthday Gifts";
+        };
+
+        const openSecretPopup = () => {
+            secretName.value = savedName;
+            secretMaxPrice.value = maxPrice;
+            secretPopup.classList.add("is-open");
+            secretName.focus();
+        };
+
+        updatePageTitle(savedName);
+
+        secretButton.addEventListener("click", () => {
+            secretTapCount += 1;
+            clearTimeout(secretTapTimer);
+            secretTapTimer = setTimeout(() => {
+                secretTapCount = 0;
+            }, 1200);
+
+            if (secretTapCount === 5) {
+                secretTapCount = 0;
+                openSecretPopup();
+            }
+        });
+
+        secretCancel.addEventListener("click", () => {
+            secretPopup.classList.remove("is-open");
+        });
+
+        secretPopup.addEventListener("click", event => {
+            if (event.target === secretPopup) {
+                secretPopup.classList.remove("is-open");
+            }
+        });
+
+        secretOk.addEventListener("click", () => {
+            const nextMaxPrice = Number(secretMaxPrice.value);
+
+            if (!Number.isFinite(nextMaxPrice) || nextMaxPrice < 0) {
+                secretMaxPrice.focus();
+                return;
+            }
+
+            const nextName = secretName.value.trim();
+            maxPrice = nextMaxPrice;
+            savedName = nextName;
+            localStorage.setItem("birthdayCatalogName", nextName);
+            localStorage.setItem("birthdayCatalogMaxPrice", String(maxPrice));
+            updatePageTitle(nextName);
+            secretPopup.classList.remove("is-open");
+        });
 
         const formatPrice = (price) => {
             return new Intl.NumberFormat("ja-JP", {

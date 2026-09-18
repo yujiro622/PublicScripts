@@ -274,3 +274,81 @@ h1 {
         font-size: 16px;
     }
 }
+
+.secret-button {
+    position: fixed;
+    left: 10px;
+    bottom: 10px;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: #be5b84;
+    color: white;
+    opacity: 0.08;
+    cursor: pointer;
+    z-index: 40;
+}
+
+.secret-popup {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 60;
+}
+
+.secret-popup.is-open {
+    display: flex;
+}
+
+.secret-popup-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: min(90vw, 360px);
+    padding: 24px;
+    border-radius: 14px;
+    background: white;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    text-align: left;
+}
+
+.secret-popup-inner h2 {
+    margin: 0 0 8px;
+    color: #be5b84;
+    text-align: center;
+}
+
+.secret-popup-inner input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font: inherit;
+}
+
+.secret-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.secret-actions button {
+    padding: 8px 16px;
+    border: 0;
+    border-radius: 6px;
+    background: #be5b84;
+    color: white;
+    cursor: pointer;
+    font: inherit;
+}
+
+.secret-actions button:first-child {
+    background: #888;
+}

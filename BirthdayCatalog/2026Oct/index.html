@@ -11,7 +11,7 @@
 
 <body>
     <div class="app">
-        <h1>5th Birthday Gifts</h1>
+        <h1 id="page-title">5th Birthday Gifts</h1>
         <h2>ほしいものをえらんでね</h2>
 
         <div id="image-container" class="image-container">
@@ -63,6 +63,21 @@
                         </tr>
                     </tfoot>
                 </table>
+            </div>
+        </div>
+
+        <button id="secret-button" class="secret-button" type="button" aria-label="設定を開く">●</button>
+        <div id="secret-popup" class="secret-popup" role="dialog" aria-modal="true" aria-labelledby="secret-title">
+            <div class="secret-popup-inner">
+                <h2 id="secret-title">ひみつの設定</h2>
+                <label for="secret-name">名前</label>
+                <input id="secret-name" type="text" autocomplete="name">
+                <label for="secret-max-price">上限金額</label>
+                <input id="secret-max-price" type="number" min="0" step="1" inputmode="numeric">
+                <div class="secret-actions">
+                    <button id="secret-cancel" type="button">キャンセル</button>
+                    <button id="secret-ok" type="button">OK</button>
+                </div>
             </div>
         </div>
 
