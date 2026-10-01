@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f2f1e9">
+    <title>Drip Timer | ハンドドリップ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="app-shell">
+        <header class="masthead">
+            <div class="brand-lockup">
+                <div class="brand-icon" aria-hidden="true">
+                    <svg viewBox="0 0 48 48" role="presentation">
+                        <path d="M15 15c-4-3 3-5 0-9M24 15c-4-3 3-5 0-9M33 15c-4-3 3-5 0-9" />
+                        <path d="M8 20h29l-3 17H12L8 20Z" />
+                        <path d="M37 23h2a6 6 0 0 1 0 12h-7" />
+                        <path d="M6 40h36" />
+                    </svg>
+                </div>
+                <div>
+                    <p class="eyebrow">YOUR DAILY BREW TOOL</p>
+                    <h1>Drip Timer</h1>
+                </div>
+            </div>
+            <img
+                class="masthead-photo"
+                src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=720&q=85"
+                alt="ハンドドリップでコーヒーを淹れている様子"
+            >
+        </header>
+
+        <section class="recipe-section" aria-labelledby="recipe-heading">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">01 / RECIPE</p>
+                </div>
+                <label class="recipe-picker">
+                    <span class="visually-hidden">レシピを選択</span>
+                    <select id="recipe-select" disabled>
+                        <option>レシピを読み込み中...</option>
+                    </select>
+                    <span class="select-chevron" aria-hidden="true">⌄</span>
+                </label>
+            </div>
+
+            <div id="recipe-content" class="recipe-content" hidden>
+                <div class="recipe-overview">
+                    <div>
+                        <h3 id="recipe-name"></h3>
+                    </div>
+                    <div class="recipe-amounts" aria-label="分量">
+                        <div><span>COFFEE</span><strong><b id="coffee-grams"></b><small>g</small></strong></div>
+                        <div><span>WATER</span><strong><b id="water-ml"></b><small>ml</small></strong></div>
+                    </div>
+                </div>
+
+                <ol id="steps-list" class="steps-list" aria-label="抽出手順"></ol>
+            </div>
+            <p id="load-error" class="load-error" role="alert" hidden></p>
+        </section>
+
+        <section class="timer-section" aria-labelledby="timer-heading">
+            <div class="timer-topline">
+                <div>
+                    <p class="eyebrow">02 / BREW</p>
+                    <h2 id="timer-heading">抽出タイマー</h2>
+                </div>
+                <div id="timer-status" class="timer-status" aria-live="polite">準備完了</div>
+            </div>
+
+            <div class="timer-readout" id="timer-readout" aria-label="経過時間">00:00.0</div>
+            <div class="progress-track" aria-hidden="true"><div id="timer-progress" class="progress-fill"></div></div>
+
+            <div class="next-step" aria-live="polite">
+                <span class="next-step-label" id="next-step-label">次の手順</span>
+                <strong id="next-step-value">レシピを読み込み中...</strong>
+            </div>
+
+            <div class="timer-controls">
+                <button id="start-pause" class="primary-button" type="button" disabled>
+                    <span class="button-symbol" aria-hidden="true">▶</span>
+                    <span>スタート</span>
+                </button>
+                <button id="finish-button" class="secondary-button" type="button" disabled>終了</button>
+                <button id="reset-button" class="reset-button" type="button" disabled aria-label="タイマーをリセット" title="リセット">
+                    <span aria-hidden="true">↺</span>
+                </button>
+            </div>
+            <p class="timer-footnote">目標時刻を過ぎても計測は続きます</p>
+        </section>
+
+        <footer class="page-footer"><span>POUR SLOWLY</span><span>ENJOY THE MOMENT</span></footer>
+    </main>
+</body>
+</html>

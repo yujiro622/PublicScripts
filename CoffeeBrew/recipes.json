@@ -1,0 +1,41 @@
+[
+  {
+    "id": "12g-190ml",
+    "name": "12g 190mlレシピ",
+    "coffeeGrams": 12,
+    "waterMl": 190,
+    "steps": [
+      { "timeSeconds": 30, "label": "40ml" },
+      { "timeSeconds": 60, "label": "80ml" },
+      { "timeSeconds": 80, "label": "140ml" },
+      { "timeSeconds": 110, "label": "190ml" },
+      { "timeSeconds": 150, "label": "落ち切り" }
+    ]
+  },
+  {
+    "id": "15g-240ml",
+    "name": "15g 240mlレシピ",
+    "coffeeGrams": 15,
+    "waterMl": 240,
+    "steps": [
+      { "timeSeconds": 30, "label": "50ml" },
+      { "timeSeconds": 60, "label": "120ml" },
+      { "timeSeconds": 90, "label": "190ml" },
+      { "timeSeconds": 120, "label": "240ml" },
+      { "timeSeconds": 180, "label": "落ち切り" }
+    ]
+  },
+  {
+    "id": "20g-300ml",
+    "name": "20g 300mlレシピ",
+    "coffeeGrams": 20,
+    "waterMl": 300,
+    "steps": [
+      { "timeSeconds": 35, "label": "60ml" },
+      { "timeSeconds": 70, "label": "140ml" },
+      { "timeSeconds": 110, "label": "220ml" },
+      { "timeSeconds": 145, "label": "300ml" },
+      { "timeSeconds": 210, "label": "落ち切り" }
+    ]
+  }
+]
