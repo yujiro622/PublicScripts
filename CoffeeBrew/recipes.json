@@ -1,5 +1,56 @@
 [
   {
+    "id": "acid-8g",
+    "name": "   Acid Coffee 8g",
+    "coffeeGrams": 8,
+    "waterMl": 130,
+    "steps": [
+      { "timeSeconds": 30, "label": "30ml" },
+      { "timeSeconds": 70, "label": "80ml" },
+      { "timeSeconds": 105, "label": "110ml" },
+      { "timeSeconds": 150, "label": "130ml" }
+    ]
+  },
+  {
+    "id": "acid-15g",
+    "name": "Acid Coffee 15g",
+    "coffeeGrams": 15,
+    "waterMl": 260,
+    "steps": [
+      { "timeSeconds": 30, "label": "60ml" },
+      { "timeSeconds": 70, "label": "160ml" },
+      { "timeSeconds": 105, "label": "230ml" },
+      { "timeSeconds": 150, "label": "260ml" }
+    ]
+  },
+  {
+    "id": "the-light-up-coffee-15g",
+    "name": "The LIGHT UP COFFEE 15g",
+    "coffeeGrams": 15,
+    "waterMl": 240,
+    "steps": [
+      { "timeSeconds": 30, "label": "45ml" },
+      { "timeSeconds": 60, "label": "100ml" },
+      { "timeSeconds": 80, "label": "160ml" },
+      { "timeSeconds": 100, "label": "200ml" },
+      { "timeSeconds": 150, "label": "240ml" }
+    ]
+  },
+  {
+  "id": "15g-260ml-91-92c",
+  "name": "15g 260ml レシピ (91-92℃)",
+  "coffeeGrams": 15,
+  "waterMl": 260,
+  "steps": [
+    { "timeSeconds": 0, "label": "60ml" },
+    { "timeSeconds": 40, "label": "140ml" },
+    { "timeSeconds": 70, "label": "180ml" },
+    { "timeSeconds": 90, "label": "220ml" },
+    { "timeSeconds": 110, "label": "260ml" },
+    { "timeSeconds": 140, "label": "落ち切り" }
+  ]
+},
+  {
     "id": "12g-190ml",
     "name": "12g 190mlレシピ",
     "coffeeGrams": 12,
