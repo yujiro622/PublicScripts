@@ -36,6 +36,17 @@
       { "timeSeconds": 150, "label": "240ml" }
     ]
   },
+    {
+    "id": "woodberry-16g",
+    "name": "WOODBERRY COFFEE 16g",
+    "coffeeGrams": 16,
+    "waterMl": 240,
+    "steps": [
+      { "timeSeconds": 40, "label": "50ml" },
+      { "timeSeconds": 80, "label": "160ml" },
+      { "timeSeconds": 120, "label": "240ml" }
+    ]
+  },
   {
   "id": "15g-260ml-91-92c",
   "name": "15g 260ml レシピ (91-92℃)",
